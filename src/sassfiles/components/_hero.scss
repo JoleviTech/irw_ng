@@ -1,0 +1,182 @@
+@use "../colors" as *;
+// @use "../../components" as *;
+
+.LandingPageHeroBgg::before {
+  content: "";
+  position: absolute;
+  // background-color: #2e3133;
+  background-color: rgba(46, 49, 51, 0.4);
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+.LandingPageHeroBgg {
+  overflow-x: hidden;
+}
+
+.LandingPageHeroBg {
+  background: url(/src/assets/home/homehero.jpg);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  
+}
+
+.LandingPageHeroBg h1 {
+  position: relative;
+}
+.LandingPageHeroBg h2 {
+  position: relative;
+}
+.LandingPageHeroBg p {
+  position: relative;
+}
+.LandingPageHeroBg,
+.WorkWithUsBtn,
+.WorkWithUsBtnn,
+.JoinOurComunityBtn,
+.ChallengeBtn {
+  position: relative;
+}
+
+
+@media only screen and (max-width: 725px) {
+  .LandingPageHeroBgg::before {
+    content: "";
+    height: 70vh;
+  }
+  .LandingPageHeroBg {
+    height: 70vh;
+  }
+}
+.processesNumber {
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: $prytextcolor;
+  // color: $secbtncolor;
+}
+.impactCard {
+  border-radius: 100px;
+  // background: $prybgcolor;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.impactNumber {
+  font-size: 1.8rem;
+}
+
+
+.AboutPageHeroBgg::before {
+  content: "";
+  position: absolute;
+  background-color: #2e3133;
+  height: 80vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.AboutPageHeroBgg {
+  overflow-x: hidden;
+}
+
+.AboutPageHeroBg {
+  background: url(/src/assets/about/abouthero.jpg);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 80vh;
+  width: 100%;
+}
+
+.AboutPageHeroBg h1 {
+  position: relative;
+}
+.AboutPageHeroBg h2 {
+  position: relative;
+}
+.AboutPageHeroBg h3 {
+  position: relative;
+}
+.AboutPageHeroBg p {
+  position: relative;
+}
+.AboutPageHeroBg,
+.WorkWithUsBtn,
+.WorkWithUsBtnn,
+.JoinOurComunityBtn {
+  position: relative;
+}
+.ServicesPageHeroBgg::before {
+  content: "";
+  position: absolute;
+  background-color: #2e3133;
+  height: 80vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.ServicesPageHeroBg {
+//   background: url(/src/assets/website/images/hero/abouthero/serviceshero.jpg);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 80vh;
+  width: 100%;
+}
+
+.ServicesPageHeroBg h1 {
+  position: relative;
+}
+.ServicesPageHeroBg h2 {
+  position: relative;
+}
+.ServicesPageHeroBg h3 {
+  position: relative;
+}
+.ServicesPageHeroBg p {
+  position: relative;
+}
+.ServicesPageHeroBg,
+.WorkWithUsBtn,
+.WorkWithUsBtnn,
+.JoinOurComunityBtn {
+  position: relative;
+}
+@media only screen and (max-width: 725px) {
+  .AboutPageHeroBgg::before {
+    content: "";
+    height: 70vh;
+  }
+  .AboutPageHeroBg {
+    height: 70vh;
+  }
+  .ServicesPageHeroBgg::before {
+    content: "";
+    height: 70vh;
+  }
+  .ServicesPageHeroBg {
+    height: 70vh;
+  }
+}

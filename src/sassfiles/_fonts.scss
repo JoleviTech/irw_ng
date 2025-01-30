@@ -1,0 +1,61 @@
+// @use "./colors" as *;
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--white);
+    font-family: "Rubik", serif;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: "Rubik", serif;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    // font-weight: 600;
+    font-family: "Rubik", serif;
+    // color: #fbb03b;
+  }
+  h4 {
+    font-size: 1.3rem;
+    //   font-family: ;
+    font-family: "Rubik", serif;
+  }
+  
+  h5 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: "Rubik", serif;
+  }
+  h6 {
+    font-size: 0.82em;
+    font-weight: 300;
+    font-family: "Rubik", serif;
+  }
+  
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.75rem;
+    font-family: "Comic Neue", cursive;
+  }
+  
+  .footerParagraph {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000 !important;
+    line-height: 1.75rem;
+    font-family: "Open Sans";
+  }
+  
+  // .bigFont {
+  //   font-size: 2.8rem;
+  // }
+  // .smallFont {
+  //   font-size: 1.3rem;
+  // }
+  

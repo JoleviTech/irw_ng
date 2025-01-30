@@ -1,0 +1,10 @@
+@use "./reset";
+@use "./fonts" as *;
+@use "./components/buttons";
+
+@use "./components/hero" as *;
+@use "../sassfiles/components/navbar" as *;
+@use "../sassfiles/pages/home" as *;
+@use "../sassfiles/pages/about" as *;
+@use "../sassfiles/pages/jobs" as *;
+@use "../sassfiles/components/footer" as *;

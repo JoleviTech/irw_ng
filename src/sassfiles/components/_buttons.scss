@@ -1,0 +1,62 @@
+@use "../colors" as *;
+
+.WorkWithUsBtn {
+  // background-color: $terbtncolor;
+  color: $prytextcolor;
+  border: 2px solid $prybtncolor;
+  width: 180px;
+  height: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  // border: none;
+  font-weight: 600;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+  &:hover {
+    background-color: $prybtncolor;
+    color: $sectextcolor;
+  }
+}
+.WorkWithUsBtnn {
+  // background-color: $terbtncolor;
+  color: $prytextcolor;
+  border: 2px solid #fbb03b;
+  width: 180px;
+  height: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  // border: none;
+  font-weight: 600;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+  &:hover {
+    background-color: #fbb03b;
+    color: $sectextcolor;
+  }
+}
+
+.RemoteBtn {
+  color: $prytextcolor;
+  background-color: rgba(1, 255, 2, 0.2); /* 0.6 is the opacity value */
+  border: none;
+  width: 130px;
+  height: 28px;
+  border-radius: 5px;
+  font-family: "Comic Neue", cursive;
+  font-size: 0.5rem;
+ 
+}
+.MainBtn {
+  color: $prytextcolor;
+  border: 1px solid $prybtncolor;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: "Comic Neue", cursive;
+  font-size: 0.5rem;
+  &:hover {
+    background-color: $prybtncolor;
+    color: $sectextcolor;
+  }
+ 
+}

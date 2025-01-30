@@ -1,0 +1,51 @@
+@use "../colors" as *;
+@media only screen and (max-width: 991px) {
+  .Navitemmobile {
+    background: #fff;
+    color: #000000;
+    border: 1px solid $prybtncolor !important;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 14rem;
+    height: 1.8rem;
+    &:hover {
+      background: $prybtncolor !important;
+      color: #ffffff;
+    }
+    &:focus {
+      background: $prybtncolor !important;
+      color: #ffffff;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Navicons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .NavUL {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.navText {
+  font-weight: 400;
+  font-family: "Comic Neue", cursive;
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+  .Navitemlarge {
+    &:hover {
+      // color: #fbb03b !important;
+      color: $prybtncolor !important;
+    }
+  }
+}

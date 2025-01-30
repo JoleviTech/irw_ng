@@ -1,0 +1,6 @@
+@use "../colors" as *;
+.JobsCard{
+    border-radius: 16px;
+    box-shadow: 0px 29px 20px 0px rgba(0, 0, 0, 0.04);
+    border: 1px solid $prybtncolor;
+  }
