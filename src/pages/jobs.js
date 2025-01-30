@@ -93,7 +93,7 @@ export const AllJobs = () => {
 export const JobDescription = () => {
   return (
     <> 
-    <div className="container pt-5 pb-5 px-5">
+    <div className="container pt-5 pb-5">
       <div>
         <div className="row align-items-center">
           <div className="col-12 col-md-6 text-md-start mb-3 mb-md-0">
@@ -177,7 +177,7 @@ export const JobDescription = () => {
       </h5>
      
       <ul>
-      <ul>
+      
   <li>Develop and execute effective sales strategies to achieve company sales targets and objectives.</li>
   <li>Identify and pursue new sales opportunities across various sectors within the agricultural industry.</li>
   <li>Build and maintain strong relationships with existing customers to ensure continued business and satisfaction.</li>
@@ -195,12 +195,12 @@ export const JobDescription = () => {
   <li>Work closely with the customer support and operations teams to ensure smooth delivery of products and services to clients.</li>
 </ul>
 
-      </ul>
+      
 
       <h5 className="careerSubHeader">
         <b>Requirements</b>
       </h5>
-      <ul>
+    
       <ul>
   <li>Minimum 1 year of sales experience in the FMCG sector.</li>
   <li>Minimum of SSCE.</li>
@@ -211,7 +211,7 @@ export const JobDescription = () => {
   <li>Ability to work independently, manage time effectively, and meet deadlines.</li>
   <li>Strong organizational and administrative skills, with attention to detail.</li>
 </ul>
-      </ul>
+    
        <p className="p-0 m-0">If Interested, apply{" "}<a href="https://bit.ly/IRWSales" target="_blank">here</a></p>
     <p className="p-0 m-0">Only shortlisted candidates would be contacted.</p>
     </div>

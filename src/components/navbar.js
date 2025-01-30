@@ -11,14 +11,25 @@ export const NewNavbar = () => {
   return (
     <div className="navbar navbar-expand-lg navbar-light bg-white py-0 justify-content-center">
       <div className="container ">
-        <a className="navbar-brand" href="/">
+        {/* <a className="navbar-brand" href="/">
           <img
             src={irwlogo}
             alt=""
             className="d-inline-block align-text-top"
             style={{ maxWidth: "6rem", maxHeight: "6rem" }}
           />
-        </a>
+        </a> */}
+
+<a className="navbar-brand" href="/">
+  <img
+    src={irwlogo}
+    alt=""
+    className="d-inline-block align-text-top"
+    style={{ maxWidth: "6rem", height: "auto" }}
+  />
+</a>
+
+
       
         <div
           className="navbar-toggler"
