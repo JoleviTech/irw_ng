@@ -46,7 +46,7 @@ export const NewNavbar = () => {
                 aria-current="page"
               >
                 <div className="Navitemmobile Navitemlarge ">
-                  <b>Home</b>
+                  Home
                 </div>{" "}
               </NavLink>
             </li>
@@ -59,7 +59,7 @@ export const NewNavbar = () => {
                 className="nav-link navText"
               >
                 <div className="Navitemmobile Navitemlarge">
-                  <b>About</b>
+                  About
                 </div>
               </NavLink>
             </li>
@@ -74,7 +74,7 @@ export const NewNavbar = () => {
                 className="nav-link navText"
               >
                 <div className="Navitemmobile Navitemlarge">
-                  <b>Jobs</b>
+                  Jobs
                 </div>
               </NavLink>
             </li>

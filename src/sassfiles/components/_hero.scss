@@ -49,6 +49,27 @@
 }
 
 
+.gradientBg {
+  background: rgba(0, 0, 0, 0.678);
+  // background-image: linear-gradient(
+  //     to right,
+  //     #252c3e,
+  //     rgba(37, 44, 62, 0.66),
+  //     rgba(37, 44, 62, 0.42),
+  //     rgba(37, 44, 62, 0.1),
+  //     rgba(37, 44, 62, 0)
+  // );
+}
+.overlayBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 6;
+  //   top: 60;
+  left: 0;
+}
+
+
 @media only screen and (max-width: 725px) {
   .LandingPageHeroBgg::before {
     content: "";
@@ -119,6 +140,52 @@
 .WorkWithUsBtn,
 .WorkWithUsBtnn,
 .JoinOurComunityBtn {
+  position: relative;
+}
+.JobsPrevHeroBgg::before {
+  content: "";
+  position: absolute;
+  // background-color: #2e3133;
+  background-color: rgba(46, 49, 51, 0.4);
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+.JobsPrevHeroBgg {
+  overflow-x: hidden;
+}
+
+.JobsPrevHeroBg {
+  background: url(/src/assets/jobs/jobshero.jpg);
+  background-size: cover;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  
+}
+
+.JobsPrevHeroBg h1 {
+  position: relative;
+}
+.JobsPrevHeroBg h2 {
+  position: relative;
+}
+.JobsPrevHeroBg p {
+  position: relative;
+}
+.JobsPrevHeroBg,
+.WorkWithUsBtn,
+.WorkWithUsBtnn,
+.JoinOurComunityBtn,
+.ChallengeBtn {
   position: relative;
 }
 .ServicesPageHeroBgg::before {

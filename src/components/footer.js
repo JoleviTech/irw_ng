@@ -43,7 +43,7 @@ export const Footer = () => {
            
             <div className="mb-sm-0 mx-3">
               <a
-                href="mailto:info@irw.ng"
+                href="mailto:titio@irw.ng"
                 className="text-decoration-none text-black"
               >
                 <p className="paragraphColor textShow">

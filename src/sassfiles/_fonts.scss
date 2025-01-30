@@ -38,10 +38,11 @@ h1 {
   
   p {
     font-size: 1rem;
-    font-weight: 300;
     color: var(--white);
     line-height: 1.75rem;
-    font-family: "Comic Neue", cursive;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
   }
   
   .footerParagraph {
@@ -49,7 +50,7 @@ h1 {
     font-weight: 300;
     color: #000 !important;
     line-height: 1.75rem;
-    font-family: "Open Sans";
+    font-family:"Rubik", serif;
   }
   
   // .bigFont {
