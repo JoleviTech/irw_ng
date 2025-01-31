@@ -1,22 +1,23 @@
 // @use "./colors" as *;
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
+    font-size: 3rem;
+    font-weight: 300;
     color: var(--white);
-    font-family: "Rubik", serif;
+    font-family: "Pathway Gothic One", serif;
+    // font-family: "Rubik", serif;
   }
   
   h2 {
     font-size: 2.2rem;
-    font-weight: 600;
-    font-family: "Rubik", serif;
+    font-weight: 400;
+    font-family: "Pathway Gothic One", serif;
   }
   
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     // font-weight: 600;
-    font-family: "Rubik", serif;
+    font-family: "Pathway Gothic One", serif;
     // color: #fbb03b;
   }
   h4 {

@@ -89,13 +89,13 @@ export const Footer = () => {
           </div>
 
           <div className="d-flex justify-content-center">
-            <a
-              href="https://maps.app.goo.gl/DFurq3id3D9i5TrE7"
+            {/* <a
+              href="#"
               target="_blank"
               className="text-decoration-none text-black"
-            >
-              <p className="">41 CMD Road, Magodo/Secretariat, Lagos</p>
-            </a>
+            > */}
+              <p className="">32 Ikosi Road, Ketu</p>
+            {/* </a> */}
           </div>
         </div>
       </div>
