@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
-import irwlogo from "../assets/irw-logo.png";
+import irwlogo from "../assets/irw-logo.jpg";
 
 export const NewNavbar = () => {
   const navActive = ({ isActive }) => {
     return {
-
       color: isActive ? "#01FF02" : "#000000",
     };
   };
@@ -20,17 +19,15 @@ export const NewNavbar = () => {
           />
         </a> */}
 
-<a className="navbar-brand" href="/">
-  <img
-    src={irwlogo}
-    alt=""
-    className="d-inline-block align-text-top"
-    style={{ maxWidth: "6rem", height: "auto" }}
-  />
-</a>
+        <a className="navbar-brand" href="/">
+          <img
+            src={irwlogo}
+            alt=""
+            className="d-inline-block align-text-top"
+            style={{ maxWidth: "6rem", height: "auto" }}
+          />
+        </a>
 
-
-      
         <div
           className="navbar-toggler"
           type="button"
@@ -53,12 +50,9 @@ export const NewNavbar = () => {
                 style={navActive}
                 to="/"
                 className="nav-link navText"
-               
                 aria-current="page"
               >
-                <div className="Navitemmobile Navitemlarge ">
-                  Home
-                </div>{" "}
+                <div className="Navitemmobile Navitemlarge ">Home</div>{" "}
               </NavLink>
             </li>
 
@@ -66,27 +60,19 @@ export const NewNavbar = () => {
               <NavLink
                 style={navActive}
                 to="/about"
-             
                 className="nav-link navText"
               >
-                <div className="Navitemmobile Navitemlarge">
-                  About
-                </div>
+                <div className="Navitemmobile Navitemlarge">About</div>
               </NavLink>
             </li>
-
-  
 
             <li className="nav-item mx-3 d-flex justify-content-center">
               <NavLink
                 style={navActive}
                 to="/jobs"
-              
                 className="nav-link navText"
               >
-                <div className="Navitemmobile Navitemlarge">
-                  Jobs
-                </div>
+                <div className="Navitemmobile Navitemlarge">Jobs</div>
               </NavLink>
             </li>
           </div>{" "}
@@ -95,4 +81,3 @@ export const NewNavbar = () => {
     </div>
   );
 };
-

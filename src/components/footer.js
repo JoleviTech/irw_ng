@@ -1,4 +1,4 @@
-import irwlogo from "../assets/irw-logo.png";
+import irwlogo from "../assets/irw-logo.jpg";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -19,7 +19,6 @@ export const Footer = () => {
         </div>
         <footer class="pb-3 mb-2">
           <ul class="nav justify-content-center ">
-            
             <li class="nav-item">
               <Link to="/" class="nav-link px-2 footerParagraph">
                 Home
@@ -35,12 +34,10 @@ export const Footer = () => {
                 Jobs
               </Link>
             </li>
-           
           </ul>
         </footer>
         <div className="">
           <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center mt-2">
-           
             <div className="mb-sm-0 mx-3">
               <a
                 href="mailto:titio@irw.ng"
@@ -48,11 +45,11 @@ export const Footer = () => {
               >
                 <p className="paragraphColor textShow">
                   <i class="bi bi-envelope me-2"></i>
-                  info@irw.ng
+                  titi@irw.ng
                 </p>
               </a>
             </div>
-           
+
             <div className="mb-sm-0 mx-3">
               <a
                 href="tel:2349065996599"
@@ -71,18 +68,10 @@ export const Footer = () => {
               >
                 <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
               </a>
-              <a
-                href=""
-                target="_blank"
-                className=""
-              >
+              <a href="" target="_blank" className="">
                 <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
               </a>
-              <a
-                href=""
-                target="_blank"
-                className="text-decoration-none"
-              >
+              <a href="" target="_blank" className="text-decoration-none">
                 <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
               </a>
             </div>
@@ -94,7 +83,7 @@ export const Footer = () => {
               target="_blank"
               className="text-decoration-none text-black"
             > */}
-              <p className="">32 Ikosi Road, Ketu</p>
+            <p className="">32 Ikosi Road, Ketu</p>
             {/* </a> */}
           </div>
         </div>
@@ -105,7 +94,6 @@ export const Footer = () => {
       >
         {" "}
         <p class="text-center text-black p-0 m-0 mx-2">&copy; 2025 IRW</p>
-       
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import { NewNavbar } from "../components/navbar";
-import irwlogo from "../assets/irw-logo.png";
+import irwlogo from "../assets/irw-logo.jpg";
 import { Link } from "react-router";
 import { JobsPreviewHero } from "../components/hero";
 import work from "../assets/jobs/work.png";
