@@ -40,12 +40,12 @@ export const Footer = () => {
           <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center mt-2">
             <div className="mb-sm-0 mx-3">
               <a
-                href="mailto:titio@irw.ng"
+                href="mailto:support@irw.ng"
                 className="text-decoration-none text-black"
               >
                 <p className="paragraphColor textShow">
                   <i class="bi bi-envelope me-2"></i>
-                  titi@irw.ng
+                  support@irw.ng
                 </p>
               </a>
             </div>
