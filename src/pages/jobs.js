@@ -155,7 +155,7 @@ export const SalesJD = () => {
             <div className="col-12 col-md-6 text-md-end">
               <p style={{ fontSize: "1.5rem" }}>
                 <a
-                  href="https://bit.ly/IRWSales"
+                  href="https://forms.gle/BLKFLBUGXgCGTZ577"
                   className="text-decoration-underline"
                   style={{ color: "#033F2D" }}
                   target="_blank"
@@ -316,7 +316,7 @@ export const SalesJD = () => {
 
         <p className="p-0 m-0">
           If Interested, apply{" "}
-          <a href="https://bit.ly/IRWSales" target="_blank">
+          <a href="https://forms.gle/BLKFLBUGXgCGTZ577" target="_blank">
             here
           </a>
         </p>
@@ -342,7 +342,7 @@ export const OperationJD = () => {
             <div className="col-12 col-md-6 text-md-end">
               <p style={{ fontSize: "1.5rem" }}>
                 <a
-                  href="https://bit.ly/IRWSales"
+                  href="https://forms.gle/v6rvpc2p7Kv4VM3V6"
                   className="text-decoration-underline"
                   style={{ color: "#033F2D" }}
                   target="_blank"
@@ -353,7 +353,7 @@ export const OperationJD = () => {
             </div>
           </div>
 
-          <h3 className="mt-4">Sales Officer</h3>
+          <h3 className="mt-4">Operations Officer</h3>
 
           <div className="d-flex flex-wrap mt-2 mb-2">
             <button
@@ -476,7 +476,11 @@ export const OperationJD = () => {
 
         <p className="p-0 m-0">
           If Interested, apply{" "}
-          <a href="https://bit.ly/IRWOperationsOfficer" target="_blank">
+          <a
+            href="https://forms.gle/v6rvpc2p7Kv4VM3V6"
+            target="_blank"
+            rel="noreferrer"
+          >
             here
           </a>
         </p>

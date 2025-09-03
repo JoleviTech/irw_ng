@@ -1,52 +1,110 @@
 @use "../colors" as *;
 // @use "../../components" as *;
 
-.LandingPageHeroBgg::before {
-  content: "";
-  position: absolute;
-  // background-color: #2e3133;
-  background-color: rgba(46, 49, 51, 0.4);
-  height: 100vh;
-  width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.4;
-}
-.LandingPageHeroBgg {
-  overflow-x: hidden;
-}
+// .LandingPageHeroBgg::before {
+//   content: "";
+//   position: absolute;
+//   // background-color: #2e3133;
+//   background-color: rgba(46, 49, 51, 0.4);
+//   height: 100vh;
+//   width: 100%;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   opacity: 0.4;
+// }
+// .LandingPageHeroBgg {
+//   overflow-x: hidden;
+// }
 
-.LandingPageHeroBg {
-  background: url(/src/assets/home/homehero.jpg);
-  background-size: cover;
-  position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100%;
+// .LandingPageHeroBg {
+//   background: url(/src/assets/home/homehero.jpg);
+//   background-size: cover;
+//   position: relative;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   height: 100vh;
+//   width: 100%;
   
+// }
+/* Hero background */
+/* Your hero background */
+// .LandingPageHeroBg {
+//   background: url(/src/assets/home/homehero.jpg);
+//   background-size: cover;
+//   background-position: center;
+//   position: relative;
+//   height: 100vh;
+//   width: 100%;
+// }
+
+// /* Text wrapper to darken just behind the text and push it down */
+// .textWrapper {
+//   background: rgba(0, 0, 0, 0.6);  /* Semi-transparent dark background */
+//   padding: 2rem;
+//   border-radius: 5px;
+//   margin-top: 200px;  /* Pushes the text container downward */
+// }
+
+
+// /* Optional: if you want a drop shadow for extra emphasis */
+// .textWrapper h1,
+// .textWrapper h3,
+// .textWrapper p {
+//   text-shadow: 1px 1px 2px #000;
+// }
+.LandingPageHeroBg {
+  background: 
+    linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0) 50%,       /* 50% transparent at the top */
+      rgba(0, 0, 0, 0.7) 75%,     /* 75% mark darkened */
+      rgba(0, 0, 0, 1) 100%       /* fully dark at the bottom */
+    ),
+    url(/src/assets/home/homehero.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
-.LandingPageHeroBg h1 {
-  position: relative;
-}
-.LandingPageHeroBg h2 {
-  position: relative;
-}
-.LandingPageHeroBg p {
-  position: relative;
-}
-.LandingPageHeroBg,
-.WorkWithUsBtn,
-.WorkWithUsBtnn,
-.JoinOurComunityBtn,
-.ChallengeBtn {
-  position: relative;
-}
+/* Responsive adjustment for smaller screens */
+// @media (max-width: 768px) {
+//   .LandingPageHeroBg {
+//     background: 
+//       linear-gradient(
+//         to bottom, 
+//         rgba(0, 0, 0, 0) 40%,       /* begin darkening earlier */
+//         rgba(0, 0, 0, 0.7) 70%, 
+//         rgba(0, 0, 0, 0.95) 100%      /* nearly black at the bottom */
+//       ),
+//       url(/src/assets/home/homehero.jpg);
+//   }
+// }
+
+
+
+
+// .LandingPageHeroBg h1 {
+//   position: relative;
+// }
+// .LandingPageHeroBg h3 {
+//   position: relative;
+// }
+// .LandingPageHeroBg p {
+//   position: relative;
+// }
+// .LandingPageHeroBg,
+// .WorkWithUsBtn,
+// .WorkWithUsBtnn,
+// .JoinOurComunityBtn,
+// .ChallengeBtn {
+//   position: relative;
+// }
 
 
 .gradientBg {
@@ -172,10 +230,10 @@
   
 }
 
-.JobsPrevHeroBg h1 {
+.JobsPrevHeroBg h2 {
   position: relative;
 }
-.JobsPrevHeroBg h2 {
+.JobsPrevHeroBg h3 {
   position: relative;
 }
 .JobsPrevHeroBg p {

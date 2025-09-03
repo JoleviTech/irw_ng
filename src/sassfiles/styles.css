@@ -100,55 +100,18 @@ p {
   color: #ffffff;
 }
 
-.LandingPageHeroBgg::before {
-  content: "";
-  position: absolute;
-  background-color: rgba(46, 49, 51, 0.4);
-  height: 100vh;
-  width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.4;
-}
-
-.LandingPageHeroBgg {
-  overflow-x: hidden;
-}
-
+/* Hero background */
+/* Your hero background */
 .LandingPageHeroBg {
-  background: url(/src/assets/home/homehero.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 75%, rgb(0, 0, 0) 100%), url(/src/assets/home/homehero.jpg);
   background-size: cover;
-  position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  height: 100vh;
+  background-position: center;
   width: 100%;
-}
-
-.LandingPageHeroBg h1 {
+  height: 100vh;
   position: relative;
 }
 
-.LandingPageHeroBg h2 {
-  position: relative;
-}
-
-.LandingPageHeroBg p {
-  position: relative;
-}
-
-.LandingPageHeroBg,
-.WorkWithUsBtn,
-.WorkWithUsBtnn,
-.JoinOurComunityBtn,
-.ChallengeBtn {
-  position: relative;
-}
-
+/* Responsive adjustment for smaller screens */
 .gradientBg {
   background: rgba(0, 0, 0, 0.678);
 }
@@ -266,11 +229,11 @@ p {
   width: 100%;
 }
 
-.JobsPrevHeroBg h1 {
+.JobsPrevHeroBg h2 {
   position: relative;
 }
 
-.JobsPrevHeroBg h2 {
+.JobsPrevHeroBg h3 {
   position: relative;
 }
 

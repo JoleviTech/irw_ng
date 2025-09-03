@@ -195,7 +195,7 @@ const Partners = () => {
         style={{ color: "#06bb06" }}
       >
         <h3 className="text-center">
-          <b>PARTNERS</b>
+          <b>CLIENTS</b>
         </h3>
         <div className="row justify-content-center text-center mt-4">
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
@@ -219,7 +219,7 @@ const Partners = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
+          {/* <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
                 <img src={seda} className="h-100" />
@@ -232,7 +232,7 @@ const Partners = () => {
                 <img src={seda} className="h-100" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
