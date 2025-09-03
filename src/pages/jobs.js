@@ -25,7 +25,7 @@ export const AllJobs = () => {
       <div className="row justify-content-center mt-5 mx-lg-4 mx-sm-3">
         <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
           <div className="mb-5 py-4 JobsCard px-2 px-4">
-            <p style={{ fontSize: "0.8rem" }}>Posted: 30 Jan, 2025</p>
+            <p style={{ fontSize: "0.8rem" }}>Posted: 3rd September, 2025</p>
             {/* </button> */}
             <div className="card-body">
               <h3 className="card-title mt-4">Sales Officer</h3>
@@ -81,7 +81,7 @@ export const AllJobs = () => {
         </div>
         <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
           <div className="mb-5 py-4 JobsCard px-2 px-4">
-            <p style={{ fontSize: "0.8rem" }}>Posted: 30 Jan, 2025</p>
+            <p style={{ fontSize: "0.8rem" }}>Posted: 3rd September, 2025</p>
             {/* </button> */}
             <div className="card-body">
               <h3 className="card-title mt-4">Operation Officer</h3>
@@ -205,7 +205,7 @@ export const SalesJD = () => {
           </div>
 
           <p className="" style={{ fontSize: "0.8rem" }}>
-            Deadline: March 1st, 2025
+            Deadline: October 31st, 2025
           </p>
           <p>
             As a Sales Officer your primary responsibility will be to boost
@@ -392,7 +392,7 @@ export const OperationJD = () => {
           </div>
 
           <p className="" style={{ fontSize: "0.8rem" }}>
-            Deadline: March 1st, 2025
+            Deadline: October 31st, 2025
           </p>
           <p>
             As an Operations Officer, your primary responsibility will be to
