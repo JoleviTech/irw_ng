@@ -29,17 +29,41 @@
   font-size: 0.5rem;
  
 }
+// .MainBtn {
+//   color: $prytextcolor;
+//   border: 1px solid $prybtncolor;
+//   width: 130px;
+//   height: 40px;
+//   border-radius: 5px;
+//   font-family: "Comic Neue", cursive;
+//   font-size: 0.5rem;
+//   &:hover {
+//     background-color: $prybtncolor;
+//     color: $sectextcolor;
+//   }
+ 
+// }
+
 .MainBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;          // removes underline on <a> tags
   color: $prytextcolor;
   border: 1px solid $prybtncolor;
-  width: 130px;
-  height: 40px;
-  border-radius: 5px;
+  padding: 0 20px;
+  height: 44px;
+  border-radius: 8px;
   font-family: "Comic Neue", cursive;
-  font-size: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;            // prevents text wrapping / jumping
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
   &:hover {
     background-color: $prybtncolor;
     color: $sectextcolor;
+    text-decoration: none;        // keep underline away on hover too
   }
- 
 }

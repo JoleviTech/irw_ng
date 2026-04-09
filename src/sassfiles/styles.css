@@ -26,7 +26,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: "Rubik", serif;
 }
 
@@ -87,17 +87,26 @@ p {
 }
 
 .MainBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   color: #0C000E;
   border: 1px solid #033F2D;
-  width: 130px;
-  height: 40px;
-  border-radius: 5px;
+  padding: 0 20px;
+  height: 44px;
+  border-radius: 8px;
   font-family: "Comic Neue", cursive;
-  font-size: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .MainBtn:hover {
   background-color: #033F2D;
   color: #ffffff;
+  text-decoration: none;
 }
 
 /* Hero background */
@@ -382,10 +391,306 @@ p {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+.JobsSection {
+  padding: 64px 24px 80px;
+}
+@media (max-width: 768px) {
+  .JobsSection {
+    padding: 48px 16px 64px;
+  }
+}
+
+.JobsEyebrow {
+  text-align: center;
+  color: #06bb06;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.JobsSub {
+  text-align: center;
+  color: #999;
+  font-size: 0.84rem;
+  margin: 0 0 48px;
+}
+
+.JobsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .JobsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
 .JobsCard {
+  background: #fff;
+  border: 1px solid rgba(3, 63, 45, 0.3);
   border-radius: 16px;
   box-shadow: 0px 29px 20px 0px rgba(0, 0, 0, 0.04);
-  border: 1px solid #033F2D;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.JobsCard:hover {
+  border-color: #033F2D;
+  transform: translateY(-3px);
+}
+
+.JobsCardBody {
+  padding: 24px 24px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.JobsCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.JobCompanyBadge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: rgba(6, 187, 6, 0.1);
+  color: rgb(1.8409090909, 38.6590909091, 27.6136363636);
+  border-radius: 20px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.JobPosted {
+  font-size: 0.7rem;
+  color: #ccc;
+  white-space: nowrap;
+}
+
+.JobsCardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.JobMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.JobMetaPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: rgb(1.8409090909, 38.6590909091, 27.6136363636);
+  background: rgba(6, 187, 6, 0.07);
+  border: 1px solid rgba(3, 63, 45, 0.2);
+  border-radius: 20px;
+  padding: 5px 12px;
+  white-space: nowrap;
+  line-height: 1;
+}
+.JobMetaPill img {
+  flex-shrink: 0;
+}
+
+.JobsCardDesc {
+  font-size: 0.81rem;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.JobsCardFooter {
+  padding: 20px 24px 24px;
+}
+
+.JobsCardDivider {
+  height: 1px;
+  background: rgba(6, 187, 6, 0.15);
+  margin-bottom: 18px;
+}
+
+.JobsCardBtn {
+  display: flex;
+  width: 100%;
+  font-size: 0.88rem;
+}
+
+.JDPlainText {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.JDWrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+@media (max-width: 520px) {
+  .JDWrap {
+    padding: 32px 16px 72px;
+  }
+}
+
+.JDNotFound {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.JDTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+@media (max-width: 520px) {
+  .JDTopBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.JDBackLink {
+  font-size: 0.82rem;
+  color: #033F2D;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.JDBackLink:hover {
+  opacity: 1;
+  color: #033F2D;
+}
+
+.JDApplyLinkTop {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #033F2D;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.JDApplyLinkTop:hover {
+  color: #06bb06;
+}
+
+.JDHeader {
+  padding-left: 18px;
+  border-left: 4px solid #06bb06;
+  margin-bottom: 28px;
+}
+
+.JDTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+@media (max-width: 520px) {
+  .JDTitle {
+    font-size: 1.35rem;
+  }
+}
+
+.JDMetaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.JDCompanyLine {
+  font-size: 0.76rem;
+  color: #aaa;
+  margin: 6px 0 0;
+}
+
+.JDSummary {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.8;
+  background: rgba(6, 187, 6, 0.05);
+  border: 1px solid rgba(6, 187, 6, 0.2);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 40px;
+}
+
+.JDSectionHeading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(6, 187, 6, 0.2);
+}
+
+.JDList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.JDList li {
+  font-size: 0.87rem;
+  color: #555;
+  line-height: 1.7;
+  padding-left: 22px;
+  position: relative;
+}
+.JDList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #06bb06;
+}
+
+.JDApplyBottom {
+  display: inline-flex;
+  margin-top: 8px;
+  font-size: 0.92rem;
+  width: auto;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.JDFooterNote {
+  font-size: 0.78rem;
+  color: #bbb;
+  margin-top: 14px;
 }
 
 .footerBg {
@@ -394,5 +699,4 @@ p {
 
 .LinkedIncolor, .IGcolor, .Twittercolor {
   color: #000000 !important;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
