@@ -64,16 +64,17 @@ export const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/irw-iranlowo"
                 target="_blank"
+                rel="noreferrer"
                 className="text-decoration-none"
               >
                 <i class="bi bi-linkedin mx-2 textShow LinkedIncolor"></i>
               </a>
-              <a href="" target="_blank" className="">
+              {/* <a href="" target="_blank" className="">
                 <i class="bi bi-instagram mx-2 textShow IGcolor"></i>
               </a>
               <a href="" target="_blank" className="text-decoration-none">
                 <i class="bi bi-twitter mx-2 textShow Twittercolor"></i>
-              </a>
+              </a> */}
             </div>
           </div>
 

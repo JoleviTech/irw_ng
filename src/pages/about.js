@@ -39,6 +39,7 @@ const VisionAndMission = () => {
               <div className="text-center">
                 <img
                   src={vision}
+                  alt="vision"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -57,6 +58,7 @@ const VisionAndMission = () => {
               <div className="text-center">
                 <img
                   src={mission}
+                  alt="mission"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -88,6 +90,7 @@ const CoreValues = () => {
               <div className="text-center">
                 <img
                   src={professionalism}
+                  alt="professionalism"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -102,6 +105,7 @@ const CoreValues = () => {
               <div className="text-center">
                 <img
                   src={integrity}
+                  alt="integrity"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -116,6 +120,7 @@ const CoreValues = () => {
               <div className="text-center">
                 <img
                   src={discipline}
+                  alt="discipline"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -130,6 +135,7 @@ const CoreValues = () => {
               <div className="text-center">
                 <img
                   src={peoplecentered}
+                  alt="peoplecentered"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -144,6 +150,7 @@ const CoreValues = () => {
               <div className="text-center">
                 <img
                   src={loyalty}
+                  alt="loyalty"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -158,6 +165,7 @@ const CoreValues = () => {
               <div className="text-center">
                 <img
                   src={knowledge}
+                  alt="knowledge"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -172,6 +180,7 @@ const CoreValues = () => {
               <div className="text-center">
                 <img
                   src={excellence}
+                  alt="excellence"
                   className="img-fluid"
                   style={{ width: "100px", height: "auto" }}
                 />
@@ -201,21 +210,21 @@ const Partners = () => {
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={jolevi} className="h-100" />
+                <img src={jolevi} alt="jolevi" className="h-100" />
               </div>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={freshchow} className="h-100" />
+                <img src={freshchow} alt="freshchow" className="h-100" />
               </div>
             </div>
           </div>
           <div className="col-lg-2 col-md-4 col-sm-10 px-lg-5 px-md-4 px-sm-5 d-flex align-items-center justify-content-center">
             <div className="px-4 mb-5 py-2 w-100 h-100 d-flex align-items-center justify-content-center">
               <div className="text-center">
-                <img src={seda} className="h-100" />
+                <img src={seda} alt="seda" className="h-100" />
               </div>
             </div>
           </div>

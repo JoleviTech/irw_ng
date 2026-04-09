@@ -37,6 +37,7 @@ export const WhatWeDoCard = () => {
             <div className="ms-3">
               <img
                 src={recruitment}
+                alt="recruitment"
                 className="img-fluid"
                 style={{ width: "100px", height: "auto" }}
               />
@@ -59,6 +60,7 @@ export const WhatWeDoCard = () => {
             <div className="ms-3">
               <img
                 src={project}
+                alt="project"
                 className="img-fluid"
                 style={{ width: "100px", height: "auto" }}
               />
@@ -79,6 +81,7 @@ export const WhatWeDoCard = () => {
             <div className="ms-3">
               <img
                 src={businessdev}
+                alt="businessdev"
                 className="img-fluid"
                 style={{ width: "100px", height: "auto" }}
               />
@@ -99,6 +102,7 @@ export const WhatWeDoCard = () => {
             <div className="ms-3">
               <img
                 src={hr}
+                alt="hr"
                 className="img-fluid"
                 style={{ width: "100px", height: "auto" }}
               />
@@ -119,6 +123,7 @@ export const WhatWeDoCard = () => {
             <div className="ms-3">
               <img
                 src={sales}
+                alt="sales"
                 className="img-fluid"
                 style={{ width: "100px", height: "auto" }}
               />
