@@ -147,9 +147,9 @@ export const JobsPreview = () => (
 export const AllJobs = () => (
   <div className="JobsSection WhatWeDoBg">
     <p className="JobsEyebrow">Job Openings</p>
-    <p className="JobsSub">
+    {/* <p className="JobsSub">
       {JOBS.length} open position{JOBS.length !== 1 ? "s" : ""} across our partner companies
-    </p>
+    </p> */}
     <div className="JobsGrid">
       {JOBS.map((job) => (
         <JobCard key={job.id} job={job} />
