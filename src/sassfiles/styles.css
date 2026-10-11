@@ -61,7 +61,7 @@ p {
 
 .WorkWithUsBtn {
   color: #0C000E;
-  border: 1px solid #06bb06;
+  border: 1px solid #00FF00;
   width: 180px;
   height: 50px;
   border-radius: 15px;
@@ -71,7 +71,7 @@ p {
   font-size: 1.2rem;
 }
 .WorkWithUsBtn:hover {
-  background-color: #033F2D;
+  background-color: #0C000E;
   color: #ffffff;
 }
 
@@ -92,7 +92,7 @@ p {
   justify-content: center;
   text-decoration: none;
   color: #0C000E;
-  border: 1px solid #033F2D;
+  border: 1px solid #0C000E;
   padding: 0 20px;
   height: 44px;
   border-radius: 8px;
@@ -104,7 +104,7 @@ p {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .MainBtn:hover {
-  background-color: #033F2D;
+  background-color: #0C000E;
   color: #ffffff;
   text-decoration: none;
 }
@@ -325,7 +325,7 @@ p {
   .Navitemmobile {
     background: #fff;
     color: #000000;
-    border: 1px solid #033F2D !important;
+    border: 1px solid #0C000E !important;
     border-radius: 4px;
     display: flex;
     justify-content: center !important;
@@ -334,11 +334,11 @@ p {
     height: 1.8rem;
   }
   .Navitemmobile:hover {
-    background: #033F2D !important;
+    background: #0C000E !important;
     color: #ffffff;
   }
   .Navitemmobile:focus {
-    background: #033F2D !important;
+    background: #0C000E !important;
     color: #ffffff;
   }
 }
@@ -363,7 +363,7 @@ p {
 
 @media (min-width: 992px) and (max-width: 1600px) {
   .Navitemlarge:hover {
-    color: #033F2D !important;
+    color: #0C000E !important;
   }
 }
 .WhatWeDoBg {
@@ -373,7 +373,7 @@ p {
 .WhatWeDoCard {
   border-radius: 16px;
   box-shadow: 0px 29px 20px 0px rgba(0, 0, 0, 0.04);
-  border: 1px solid #06bb06;
+  border: 1px solid #00FF00;
 }
 
 .PartnersBg {
@@ -402,7 +402,7 @@ p {
 
 .JobsEyebrow {
   text-align: center;
-  color: #06bb06;
+  color: #00FF00;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 3px;
@@ -433,7 +433,7 @@ p {
 
 .JobsCard {
   background: #fff;
-  border: 1px solid rgba(3, 63, 45, 0.3);
+  border: 1px solid rgba(12, 0, 14, 0.3);
   border-radius: 16px;
   box-shadow: 0px 29px 20px 0px rgba(0, 0, 0, 0.04);
   display: flex;
@@ -442,7 +442,7 @@ p {
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .JobsCard:hover {
-  border-color: #033F2D;
+  border-color: #0C000E;
   transform: translateY(-3px);
 }
 
@@ -464,8 +464,8 @@ p {
 .JobCompanyBadge {
   font-size: 0.68rem;
   font-weight: 700;
-  background: rgba(6, 187, 6, 0.1);
-  color: rgb(1.8409090909, 38.6590909091, 27.6136363636);
+  background: rgba(0, 255, 0, 0.1);
+  color: black;
   border-radius: 20px;
   padding: 3px 10px;
   white-space: nowrap;
@@ -496,9 +496,9 @@ p {
   align-items: center;
   gap: 6px;
   font-size: 0.75rem;
-  color: rgb(1.8409090909, 38.6590909091, 27.6136363636);
-  background: rgba(6, 187, 6, 0.07);
-  border: 1px solid rgba(3, 63, 45, 0.2);
+  color: black;
+  background: rgba(0, 255, 0, 0.07);
+  border: 1px solid rgba(12, 0, 14, 0.2);
   border-radius: 20px;
   padding: 5px 12px;
   white-space: nowrap;
@@ -525,7 +525,7 @@ p {
 
 .JobsCardDivider {
   height: 1px;
-  background: rgba(6, 187, 6, 0.15);
+  background: rgba(0, 255, 0, 0.15);
   margin-bottom: 18px;
 }
 
@@ -578,31 +578,31 @@ p {
 
 .JDBackLink {
   font-size: 0.82rem;
-  color: #033F2D;
+  color: #0C000E;
   text-decoration: none;
   opacity: 0.7;
   transition: opacity 0.15s;
 }
 .JDBackLink:hover {
   opacity: 1;
-  color: #033F2D;
+  color: #0C000E;
 }
 
 .JDApplyLinkTop {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #033F2D;
+  color: #0C000E;
   text-decoration: none;
   text-underline-offset: 3px;
   transition: color 0.15s;
 }
 .JDApplyLinkTop:hover {
-  color: #06bb06;
+  color: #00FF00;
 }
 
 .JDHeader {
   padding-left: 18px;
-  border-left: 4px solid #06bb06;
+  border-left: 4px solid #00FF00;
   margin-bottom: 28px;
 }
 
@@ -636,8 +636,8 @@ p {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.8;
-  background: rgba(6, 187, 6, 0.05);
-  border: 1px solid rgba(6, 187, 6, 0.2);
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.2);
   border-radius: 12px;
   padding: 20px 22px;
   margin-bottom: 40px;
@@ -649,7 +649,7 @@ p {
   color: #1a1a1a;
   margin: 0 0 14px;
   padding-bottom: 8px;
-  border-bottom: 2px solid rgba(6, 187, 6, 0.2);
+  border-bottom: 2px solid rgba(0, 255, 0, 0.2);
 }
 
 .JDList {
@@ -675,7 +675,7 @@ p {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #06bb06;
+  background: #00FF00;
 }
 
 .JDApplyBottom {

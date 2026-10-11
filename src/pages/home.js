@@ -1,4 +1,3 @@
-import { NewNavbar } from "../components/navbar";
 import { LandingPageHero } from "../components/hero";
 import recruitment from "../assets/home/recruitment.png";
 import project from "../assets/home/project.png";
@@ -9,7 +8,6 @@ import sales from "../assets/home/sales.png";
 const LandingPage = () => {
   return (
     <>
-      <NewNavbar />
       <LandingPageHero />
       <WhatWeDoCard />
     </>

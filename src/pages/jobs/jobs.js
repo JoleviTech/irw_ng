@@ -138,7 +138,6 @@ const Pill = ({ src, label, iconWidth = 14 }) => (
 // ─────────────────────────────────────────────
 export const JobsPreview = () => (
   <>
-    <NewNavbar />
     <JobsPreviewHero />
     <AllJobs />
   </>

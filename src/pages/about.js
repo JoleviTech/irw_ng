@@ -1,4 +1,3 @@
-import { NewNavbar } from "../components/navbar";
 import { AboutPageHero } from "../components/hero";
 import vision from "../assets/about/vision.png";
 import mission from "../assets/about/mission.png";
@@ -16,7 +15,6 @@ import seda from "../assets/home/seda.png";
 const About = () => {
   return (
     <>
-      <NewNavbar />
       <AboutPageHero />
       <VisionAndMission />
       <CoreValues />
