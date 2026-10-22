@@ -14,6 +14,14 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import IRWHomepage from "./pages/new-home";
 import AboutUs from "./pages/new-about";
+import Careers from "./pages/new-career";
+import JobDetail from "./pages/jobs/new-job-description";
+import Contact from "./pages/new-contact";
+import HRServices from "./pages/services/hr-services";
+import BusinessDevelopment from "./pages/services/business-development";
+import BusinessProcessOptimisation from "./pages/services/business-process-optimisation";
+import ProjectManagement from "./pages/services/project-management";
+import Facilitation from "./pages/services/facilitation";
 
 function App() {
   return (
@@ -29,6 +37,15 @@ function App() {
         {/* <Route path="/operation" element={<OperationJD />} /> */}
         <Route path="/new-home" element={<IRWHomepage />} />
         <Route path="/new-about" element={<AboutUs />} />
+        <Route path="/new-careers" element={<Careers />} />
+        <Route path="/new-jobs/:slug" element={<JobDetail />} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/services/hr-services" element={<HRServices/>} />
+        <Route path="/services/business-development" element={<BusinessDevelopment/>} />
+        <Route path="/services/business-process-optimisation" element={<BusinessProcessOptimisation/>} />
+        <Route path="/services/project-management" element={<ProjectManagement/>} />
+        <Route path="/services/facilitation" element={<Facilitation/>} />
+
 
       </Routes>
       <Footer />
