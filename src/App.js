@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "./pages/home";
-import About from "./pages/about";
+// import LandingPage from "./pages/home";
+// import About from "./pages/about";
 import { JobsPreview } from "./pages/jobs/jobs";
 // import { SalesJD } from "./pages/jobs";
 // import { OperationJD } from "./pages/jobs";

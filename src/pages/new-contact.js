@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import heroImg from '../assets/contact/DSC08177.jpg';
-import { container, section, btnPrimary, styles } from './shared';
+import { container, section, styles } from './shared';
 
 const hours = [['Monday to Friday', '8:30am to 5:30pm'], ['Saturday', '10:00am to 2:00pm (by appointment)'], ['Sunday', 'Closed']];
 const topics = ['Hiring for my business', 'Project management', 'HR services', 'Sales support', 'Looking for a job', 'Something else'];
 
-const field = 'mt-2 w-full rounded-xl border border-[#0C000E]/20 bg-white px-4 py-3 text-base transition-colors placeholder:text-[#0C000E]/35 focus:border-[#0C000E]';
+// const field = 'mt-2 w-full rounded-xl border border-[#0C000E]/20 bg-white px-4 py-3 text-base transition-colors placeholder:text-[#0C000E]/35 focus:border-[#0C000E]';
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', phone: '', topic: topics[0], message: '' });
-  const [sent, setSent] = useState(false);
-  const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+  // const [sent, setSent] = useState(false);
+  // const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
-  const submit = (e) => {
-    e.preventDefault();
-    // TODO: replace with your API call. This opens the visitor's mail app so it works with no backend.
-    const body = `Name: ${form.name}\nPhone: ${form.phone}\nTopic: ${form.topic}\n\n${form.message}`;
-    window.location.href = `mailto:support@irw.ng?subject=${encodeURIComponent(`${form.topic} - ${form.name}`)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
-  };
+  // const submit = (e) => {
+  //   e.preventDefault();
+  //   // TODO: replace with your API call. This opens the visitor's mail app so it works with no backend.
+  //   const body = `Name: ${form.name}\nPhone: ${form.phone}\nTopic: ${form.topic}\n\n${form.message}`;
+  //   window.location.href = `mailto:support@irw.ng?subject=${encodeURIComponent(`${form.topic} - ${form.name}`)}&body=${encodeURIComponent(body)}`;
+  //   setSent(true);
+  // };
 
   return (
     <div className="irw w-full overflow-x-hidden bg-white text-[#0C000E] antialiased">
