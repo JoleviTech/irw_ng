@@ -1,9 +1,9 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import heroImg from '../assets/contact/DSC08177.jpg';
 import { container, section, styles } from './shared';
 
 const hours = [['Monday to Friday', '8:30am to 5:30pm'], ['Saturday', '10:00am to 2:00pm (by appointment)'], ['Sunday', 'Closed']];
-const topics = ['Hiring for my business', 'Project management', 'HR services', 'Sales support', 'Looking for a job', 'Something else'];
+// const topics = ['Hiring for my business', 'Project management', 'HR services', 'Sales support', 'Looking for a job', 'Something else'];
 
 // const field = 'mt-2 w-full rounded-xl border border-[#0C000E]/20 bg-white px-4 py-3 text-base transition-colors placeholder:text-[#0C000E]/35 focus:border-[#0C000E]';
 
