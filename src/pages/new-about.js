@@ -1,41 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// Placeholder team data - Replace photo URLs with actual assets
+import titilayo from '../assets/about/team/titilayo.jpeg';
+import oluwakemi from '../assets/about/team/oluwakemi.jpeg';
+import constance from '../assets/about/team/constance.jpeg';
+import abiodun from '../assets/about/team/abiodun.jpeg';
+import opeyemi from '../assets/about/team/opeyemi.jpeg';
+
+import tgllifescience from '../assets/about/clients/tgl-lifescience.png';
+import logistikus from '../assets/about/clients/logistikus.jpeg';
+
+
 const teamMembers = [
   {
-    name: 'Titi Ekundayo',
-    role: 'Managing Partner & Founder',
-    expertise: 'Business Strategy & Technical TPM',
-    bio: 'Over a decade leading cross-functional teams across software architecture, project management, and business operations.',
-    photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+    name: 'Titilayo Ekundayo',
+    role: 'Strategy | Operational Excellence | Venture Building',
+    bio: 'A business strategist and operations leader with over a decade of experience driving growth, operational excellence and venture success across agribusiness, food services, entrepreneurship support and youth development. She brings expertise in strategic planning, business process optimisation, venture building and stakeholder engagement, with a track record of turning ideas into scalable, high-performing organisations.',
+    photo: titilayo,
   },
   {
-    name: 'Titi Ekundayo',
-    role: 'Head of People & HR Operations',
-    expertise: 'Talent Acquisition & Organisational Design',
-    bio: 'Specialises in talent pipelines, HR compliance, and designing sustainable workplace cultures across various sectors.',
-    photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+    name: 'Abiodun Akinnagbe',
+    role: 'Business Performance & Operational Improvement Consultant',
+    bio: 'A business and data analytics professional focused on helping organisations improve performance, optimise operations, and achieve measurable business outcomes. With experience across financial services and public sector operations, she brings expertise in data analysis, performance reporting, process improvement, and stakeholder management.',
+    photo: abiodun,
   },
   {
-    name: 'Titi Ekundayo',
-    role: 'Lead, Business Process Optimisation',
-    expertise: 'Process Re-engineering & Operations',
-    bio: 'Helps growing enterprises identify operational bottlenecks and re-engineer workflows for high efficiency and scalability.',
-    photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+    name: 'Constance Odiase',
+    credentials: 'R.Eng (COREN), MNSE, MNIPE, MEM',
+    role: 'Business Transformation | Operations | Commercial Growth',
+    bio: 'Constance Odiase is an engineering and business operations executive with over a decade of experience in business transformation, operational management, commercial development, project delivery, and workforce performance across the energy, power, and engineering sectors.',
+    photo: constance,
+  },
+  {
+    name: 'Oluwakemi Ekundayo',
+    role: 'Business Performance & Project Management Consultant',
+    bio: 'A business and project management professional with experience supporting organisational performance, strategic initiatives, and operational effectiveness across the financial services and FMCG sectors. She brings expertise in stakeholder management, performance monitoring, process improvement, and project coordination.',
+    photo: oluwakemi,
+  },
+  {
+    name: 'Opeyemi Bioku',
+    role: 'Digital Transformation Professional & Technology Consultant',
+    bio: 'Opeyemi Bioku is a digital transformation professional with experience in building digital infrastructure for businesses, including websites, applications, and the systems that connect them. She works with business owners and teams to bring these into daily operations and customer experience.',
+    photo: opeyemi,
   },
 ];
 
 const clients = [
-  'Meridian Bank',
-  'Kolade Foods',
-  'Atlas Logistics',
-  'Ferrous Energy',
-  'Northgate Insurance',
-  'Pelican Telecoms',
-  'Brightwell Health',
-  'Oriel Distillers',
+  { name: 'TGL Lifescience', logo: tgllifescience },
+  { name: 'Logistikus', logo: logistikus },
+
 ];
+
+const marqueeLogos = Array.from({ length: 8 }, () => clients).flat();
 
 const values = [
   {
@@ -82,7 +98,7 @@ const styles = `
 .irw a:hover { text-decoration: none !important; }
 .irw a:focus-visible, .irw button:focus-visible { outline: 2px solid #00FF00; outline-offset: 3px; }
 
-@keyframes marquee { 
+@keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
@@ -90,18 +106,49 @@ const styles = `
 @media (prefers-reduced-motion: reduce) { .irw * { animation: none !important; transition: none !important; } }
 `;
 
+const TeamCard = ({ member, className = '' }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className={`flex flex-col overflow-hidden rounded-2xl border border-[#0C000E]/10 bg-white ${className}`}>
+      <img
+        src={member.photo}
+        alt={member.name}
+        className="aspect-[5/4] w-full object-cover object-top"
+      />
+      <div className="flex flex-1 flex-col gap-2 p-5">
+        <h3 className="display m-0 text-xl font-bold leading-tight">{member.name}</h3>
+        {member.credentials && (
+          <p className="m-0 text-xs font-medium leading-4 text-[#0C000E]/60">
+            {member.credentials}
+          </p>
+        )}
+        <p className="m-0 text-xs font-semibold uppercase leading-4 tracking-wider text-[#0C000E]/60">
+          {member.role}
+        </p>
+       <p className={`m-0 mt-1 text-justify text-sm leading-6 text-[#0C000E]/75 hyphens-auto ${open ? '' : 'line-clamp-3'}`}>
+          {member.bio}
+        </p>
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          className="mt-auto w-fit pt-2 text-sm font-semibold underline underline-offset-4"
+        >
+          {open ? 'Show less' : 'Read more'}
+        </button>
+      </div>
+    </div>
+  );
+};
+
 export const AboutUs = () => {
   return (
     <div className="irw w-full overflow-x-hidden bg-white text-[#0C000E] antialiased">
       <style>{styles}</style>
 
-      {/* Hero / Our Story & Philosophy Header */}
       <section className={`${container} pb-16 pt-10 lg:pb-20 lg:pt-16`}>
         <div className="max-w-3xl">
-          {/* <div className="inline-flex items-center gap-2 rounded-md bg-[#00FF00]/15 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#0C000E]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#00FF00]"></span>
-            About IRW
-          </div> */}
           <h1 className="display mt-4 text-[clamp(2.25rem,5vw,4.25rem)] font-extrabold leading-[1.05]">
             Building the engine that keeps enterprise moving.
           </h1>
@@ -111,7 +158,6 @@ export const AboutUs = () => {
         </div>
       </section>
 
-      {/* Our Story & Philosophy */}
       <section className={`${section} border-t border-[#0C000E]/10 bg-[#F8F9FA]`}>
         <div className={`${container} grid gap-12 lg:grid-cols-2 lg:gap-20`}>
           <div>
@@ -136,7 +182,6 @@ export const AboutUs = () => {
         </div>
       </section>
 
-      {/* Vision & Mission */}
       <section className={section}>
         <div className={`${container} grid gap-8 md:grid-cols-2`}>
           <div className="rounded-2xl border border-[#0C000E]/10 border-l-4 border-l-[#00FF00] bg-white p-8 sm:p-10">
@@ -161,7 +206,6 @@ export const AboutUs = () => {
         </div>
       </section>
 
-      {/* Our Values */}
       <section className={`${section} border-t border-[#0C000E]/10 bg-[#F8F9FA]`}>
         <div className={container}>
           <div className="max-w-2xl">
@@ -171,9 +215,12 @@ export const AboutUs = () => {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 flex flex-wrap justify-center gap-6">
             {values.map((v, i) => (
-              <div key={v.title} className="rounded-xl border border-[#0C000E]/10 bg-white p-6 transition-all hover:shadow-sm">
+            <div
+  key={v.title}
+  className="w-full rounded-xl border border-[#0C000E]/10 bg-white p-6 transition-all hover:shadow-sm sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]"
+>
                 <div className="flex items-center gap-3">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#00FF00]/20 text-xs font-bold text-[#0C000E]">
                     0{i + 1}
@@ -187,7 +234,6 @@ export const AboutUs = () => {
         </div>
       </section>
 
-      {/* Our Team */}
       <section className={section}>
         <div className={container}>
           <div className="max-w-2xl">
@@ -197,44 +243,51 @@ export const AboutUs = () => {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-12 flex flex-wrap justify-center gap-8">
             {teamMembers.map((member) => (
-              <div key={member.name} className="overflow-hidden rounded-2xl border border-[#0C000E]/10 bg-white">
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="h-64 w-full object-cover object-center"
-                />
-                <div className="p-6">
-                  <h3 className="display text-xl font-bold">{member.name}</h3>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#0C000E]/60">{member.role}</p>
-                  <span className="mt-3 inline-block rounded-md bg-[#F8F9FA] px-2.5 py-1 text-xs font-medium text-[#0C000E]">
-                    {member.expertise}
-                  </span>
-                  <p className="mt-4 text-sm leading-relaxed text-[#0C000E]/75">{member.bio}</p>
-                </div>
-              </div>
+            <TeamCard
+  key={member.name}
+  member={member}
+  className="w-full sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]"
+/>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Clients & Partnerships Marquee */}
       <section className="w-full overflow-hidden border-t border-[#0C000E]/10 bg-[#F8F9FA] py-16 text-[#0C000E] lg:py-20">
         <div className={container}>
           <h2 className="display text-center text-2xl font-bold sm:text-3xl">Trusted by Industry Leaders</h2>
         </div>
 
-        <div className="mt-8 max-w-full overflow-hidden border-y border-[#0C000E]/10 py-5">
-          <div className="flex w-max animate-[marquee_40s_linear_infinite] gap-12 hover:[animation-play-state:paused]">
+        {/* <div className="mt-8 max-w-full overflow-hidden border-y border-[#0C000E]/10 py-5">
+          <div className="flex w-max animate-[marquee_40s_linear_infinite] items-center hover:[animation-play-state:paused]">
             {[...clients, ...clients].map((c, i) => (
-              <span key={i} className="display whitespace-nowrap text-2xl font-extrabold text-[#0C000E]/25 sm:text-3xl">{c}</span>
+              <img
+                key={i}
+                src={c.logo}
+                alt={c.name}
+                className="mx-8 h-10 w-auto object-contain opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
+              />
             ))}
           </div>
-        </div>
+        </div> */}
+
+        
+        <div className="mt-8 max-w-full overflow-hidden border-y border-[#0C000E]/10 py-5">
+  <div className="flex w-max animate-[marquee_60s_linear_infinite] items-center hover:[animation-play-state:paused]">
+    {marqueeLogos.map((c, i) => (
+      <img
+        key={i}
+        src={c.logo}
+        alt={c.name}
+        className="mx-8 h-10 w-auto object-contain mix-blend-multiply opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
+      />
+    ))}
+  </div>
+</div>
       </section>
 
-      {/* CTA Section */}
       <section className="border-t border-[#0C000E]/10 bg-white py-16 text-[#0C000E] lg:py-20">
         <div className={`${container} grid items-end gap-8 lg:grid-cols-[1.4fr_1fr]`}>
           <div>

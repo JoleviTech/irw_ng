@@ -1,15 +1,9 @@
-// import React from 'react';
-// import { ServicePage } from './services-template';
-// import { facilitation } from './services-data';
-
-// export const Facilitation = () => <ServicePage service={facilitation} />;
-
-// export default Facilitation;
-
 import React from 'react';
 import { container, section } from '../shared';
 import { Page, Check, HeroActions, Others, Cta } from './parts';
 import { facilitation as s } from '../services/services-data';
+import heroImg from '../../assets/services/facilitation/DSC07795.jpg';
+import approachImg from '../../assets/services/facilitation/DSC08183.jpg';
 
 const notes = [
   'bg-[#00FF00] text-[#0C000E] -rotate-3',
@@ -22,7 +16,7 @@ export const Facilitation = () => (
   <Page>
     <section className={`${container} pb-16 pt-8 lg:pb-24 lg:pt-12`}>
       <div className="relative">
-        <img src={s.img.hero} alt="" className="h-[360px] w-full rounded-[2rem] bg-[#F8F9FA] object-cover sm:h-[460px] lg:h-[540px]" />
+        <img src={heroImg} alt="" className="h-[360px] w-full rounded-[2rem] bg-[#F8F9FA] object-cover sm:h-[460px] lg:h-[540px]" />
         <div className="relative -mt-24 max-w-2xl rounded-3xl border border-[#0C000E] bg-white p-7 shadow-xl sm:-mt-32 sm:ml-8 sm:p-10 lg:absolute lg:bottom-8 lg:left-8 lg:mt-0">
           <p className="inline-flex items-center gap-2 text-sm font-semibold text-[#0C000E]/70">
             <span className="h-2 w-2 rounded-full bg-[#00FF00] ring-2 ring-[#0C000E]" />
@@ -75,7 +69,7 @@ export const Facilitation = () => (
         <div>
           <h2 className="display text-2xl font-bold sm:text-3xl lg:text-4xl">Our approach</h2>
           <p className="mt-4 max-w-md text-base leading-relaxed text-[#0C000E]/75 sm:text-lg">{s.approach}</p>
-          <img src={s.img.outcomes} alt="" className="mt-8 hidden h-56 w-full max-w-md rounded-3xl bg-white object-cover lg:block" />
+        <img src={approachImg} alt="" className="mt-8 hidden aspect-[4/3] w-full max-w-md rounded-3xl bg-white object-cover object-top lg:block" />
         </div>
         <div className="relative rounded-2xl border border-[#0C000E] bg-white px-7 pb-10 pt-12 shadow-[8px_8px_0_#0C000E] sm:px-10">
           <div className="absolute inset-x-0 top-0 flex justify-around px-6" aria-hidden="true">

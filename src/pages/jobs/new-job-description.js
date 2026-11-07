@@ -32,7 +32,7 @@ export const JobDetail = () => {
         <div className={`${container} py-28`}>
           <h1 className="display text-4xl font-extrabold">That role is no longer open.</h1>
           <p className="mt-4 max-w-md text-[#0C000E]/70">It may have been filled or removed. See what is open now, or send us your CV and we will match you to the next one.</p>
-          <Link to="/new-careers" className={`${btnPrimary} mt-8`}>See current openings</Link>
+          <Link to="/careers" className={`${btnPrimary} mt-8`}>See current openings</Link>
         </div>
       </div>
     );
@@ -51,7 +51,7 @@ export const JobDetail = () => {
         <img src={IMG.office} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0C000E] via-[#0C000E]/85 to-[#0C000E]/40" />
         <div className={`${container} relative pb-14 pt-8 lg:pb-20`}>
-          <Link to="/new-careers" className="text-sm font-semibold text-white/70 transition-colors hover:text-[#00FF00]">Back to all openings</Link>
+          <Link to="/careers" className="text-sm font-semibold text-white/70 transition-colors hover:text-[#00FF00]">Back to all openings</Link>
           <p className="mt-10 text-base font-semibold text-[#00FF00]">{job.client}</p>
           <h1 className="display mt-2 max-w-3xl text-[clamp(1.875rem,3.6vw,2.875rem)] font-extrabold leading-[1.1]">{job.title}</h1>
           <div className="mt-6 flex flex-wrap gap-2">

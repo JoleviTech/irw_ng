@@ -29,16 +29,16 @@ function App() {
     <ScrollToTop />
     <NewNavbar/>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/" element={<LandingPage />} /> */}
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/jobs" element={<JobsPreview />} />
         <Route path="/jobs/:jobId" element={<JobDescriptionRoute />} />
         {/* <Route path="/sales" element={<SalesJD />} /> */}
         {/* <Route path="/operation" element={<OperationJD />} /> */}
-        <Route path="/new-home" element={<IRWHomepage />} />
-        <Route path="/new-about" element={<AboutUs />} />
-        <Route path="/new-careers" element={<Careers />} />
-        <Route path="/new-jobs/:slug" element={<JobDetail />} />
+        <Route path="/" element={<IRWHomepage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/jobs/:slug" element={<JobDetail />} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/services/hr-services" element={<HRServices/>} />
         <Route path="/services/business-development" element={<BusinessDevelopment/>} />

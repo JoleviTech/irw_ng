@@ -135,7 +135,7 @@ export const NewNavbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
-          <NavLink to="/new-home" end className={linkClass}>Home</NavLink>
+          <NavLink to="/" end className={linkClass}>Home</NavLink>
 
           {/* Desktop Services Dropdown Wrapper */}
           <div
@@ -178,7 +178,7 @@ export const NewNavbar = () => {
             </div>
           </div>
 
-          <NavLink to="/new-about" className={linkClass}>About Us</NavLink>
+          <NavLink to="/about" className={linkClass}>About Us</NavLink>
           <NavLink to="/careers" className={linkClass}>Careers</NavLink>
           <NavLink to="/contact" className={linkClass}>Contact Us</NavLink>
         </nav>

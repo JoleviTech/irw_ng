@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IMG } from './jobs/new-jobs';
+import heroImg from '../assets/contact/DSC08177.jpg';
 import { container, section, btnPrimary, styles } from './shared';
 
 const hours = [['Monday to Friday', '8:30am to 5:30pm'], ['Saturday', '10:00am to 2:00pm (by appointment)'], ['Sunday', 'Closed']];
@@ -39,7 +39,7 @@ export const Contact = () => {
           </div>
         </div>
         <div className="relative">
-          <img src={IMG.meeting} alt="IRW consultant talking through a plan with a client" className="h-[320px] w-full rounded-3xl object-cover sm:h-[400px]" />
+          <img src={heroImg} alt="IRW consultant talking through a plan with a client" className="h-[320px] w-full rounded-3xl object-cover sm:h-[400px]" />
           <div className="absolute -bottom-4 left-4 flex items-center gap-3 rounded-2xl bg-[#0C000E] px-5 py-3 text-white shadow-xl sm:-left-6">
             <span className="relative flex h-3 w-3"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00FF00] opacity-75" /><span className="relative inline-flex h-3 w-3 rounded-full bg-[#00FF00]" /></span>
             <span className="text-sm font-semibold">Replies within one working day</span>
@@ -49,8 +49,8 @@ export const Contact = () => {
 
       {/* Form + details */}
       <section className={`${section} border-t border-[#0C000E]/10 bg-[#F8F9FA]`}>
-        <div className={`${container} grid gap-12 lg:grid-cols-[1.25fr_1fr] lg:gap-16`}>
-          <div className="rounded-3xl border border-[#0C000E]/10 bg-white p-6 sm:p-10">
+        <div className={`${container} flex justify-center`}>
+          {/* <div className="rounded-3xl border border-[#0C000E]/10 bg-white p-6 sm:p-10">
             <h2 className="display text-2xl font-bold sm:text-3xl">Send us a message</h2>
             {sent ? (
               <div role="status" className="mt-6 rounded-2xl border-l-4 border-l-[#00FF00] bg-[#00FF00]/10 p-6">
@@ -79,9 +79,9 @@ export const Contact = () => {
                 <div className="sm:col-span-2"><button type="submit" className={btnPrimary}>Send message</button></div>
               </form>
             )}
-          </div>
+          </div> */}
 
-          <div className="space-y-8">
+      <div className="w-full max-w-2xl space-y-8">
             <div>
               <h2 className="display text-xl font-bold sm:text-2xl">Visit the office</h2>
               <p className="mt-3 text-base text-[#0C000E]/80">32 Ikosi Road, Ketu, Lagos</p>
