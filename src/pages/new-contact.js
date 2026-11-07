@@ -8,7 +8,7 @@ const topics = ['Hiring for my business', 'Project management', 'HR services', '
 // const field = 'mt-2 w-full rounded-xl border border-[#0C000E]/20 bg-white px-4 py-3 text-base transition-colors placeholder:text-[#0C000E]/35 focus:border-[#0C000E]';
 
 export const Contact = () => {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', topic: topics[0], message: '' });
+  // const [form, setForm] = useState({ name: '', email: '', phone: '', topic: topics[0], message: '' });
   // const [sent, setSent] = useState(false);
   // const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
