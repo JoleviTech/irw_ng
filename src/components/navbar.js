@@ -216,7 +216,7 @@ export const NewNavbar = () => {
               </div>
             )}
 
-            <NavLink to="/about-us" onClick={closeMenus} className="rounded-lg px-3 py-3 text-sm text-[#0C000E] no-underline hover:bg-[#F8F9FA]">About Us</NavLink>
+            <NavLink to="/about" onClick={closeMenus} className="rounded-lg px-3 py-3 text-sm text-[#0C000E] no-underline hover:bg-[#F8F9FA]">About Us</NavLink>
             <NavLink to="/careers" onClick={closeMenus} className="rounded-lg px-3 py-3 text-sm text-[#0C000E] no-underline hover:bg-[#F8F9FA]">Careers</NavLink>
             <NavLink to="/contact" onClick={closeMenus} className="rounded-lg px-3 py-3 text-sm text-[#0C000E] no-underline hover:bg-[#F8F9FA]">Contact Us</NavLink>
             

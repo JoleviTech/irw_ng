@@ -118,7 +118,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { label: "Home", to: "/" },
-  { label: "About Us", to: "/about-us" },
+  { label: "About Us", to: "/about" },
   { label: "Careers", to: "/careers" },
   { label: "Contact Us", to: "/contact" },
 ];
