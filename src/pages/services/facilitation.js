@@ -69,7 +69,7 @@ export const Facilitation = () => (
         <div>
           <h2 className="display text-2xl font-bold sm:text-3xl lg:text-4xl">Our approach</h2>
           <p className="mt-4 max-w-md text-base leading-relaxed text-[#0C000E]/75 sm:text-lg">{s.approach}</p>
-        <img src={approachImg} alt="" className="mt-8 hidden aspect-[4/3] w-full max-w-md rounded-3xl bg-white object-cover object-top lg:block" />
+     <img src={approachImg} alt="" className="mt-8 aspect-[4/3] w-full max-w-md rounded-3xl bg-white object-cover object-top" />
         </div>
         <div className="relative rounded-2xl border border-[#0C000E] bg-white px-7 pb-10 pt-12 shadow-[8px_8px_0_#0C000E] sm:px-10">
           <div className="absolute inset-x-0 top-0 flex justify-around px-6" aria-hidden="true">
