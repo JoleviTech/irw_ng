@@ -9,6 +9,7 @@ import opeyemi from '../assets/about/team/opeyemi.jpeg';
 
 import tgllifescience from '../assets/about/clients/tgl-lifescience.png';
 import logistikus from '../assets/about/clients/logistikus.jpeg';
+import yconcept from '../assets/about/clients/y3ss-concept.png';
 
 
 const teamMembers = [
@@ -48,6 +49,7 @@ const teamMembers = [
 const clients = [
   { name: 'TGL Lifescience', logo: tgllifescience },
   { name: 'Logistikus', logo: logistikus },
+  { name: 'Y3SSCONCEPT', logo: yconcept },
 
 ];
 

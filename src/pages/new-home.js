@@ -3,6 +3,7 @@ import { Plus } from 'lucide-react';
 
 import tgllifescience from '../assets/about/clients/tgl-lifescience.png';
 import logistikus from '../assets/about/clients/logistikus.jpeg';
+import yconcept from '../assets/about/clients/y3ss-concept.png';
 
 const services = [
   { title: 'Recruitment', slug: 'recruitment', short: 'Quality talent, placed fast.', details: 'From role definition to placement and onboarding, we run the full hiring cycle so the right people join quickly and stay.' },
@@ -29,6 +30,7 @@ const steps = [
 const clients = [
   { name: 'TGL Lifescience', logo: tgllifescience },
   { name: 'Logistikus', logo: logistikus },
+  { name: 'Y3SSCONCEPT', logo: yconcept },
 
 ];
 
