@@ -91,7 +91,7 @@ export const Careers = () => {
             {list.map((j) => (
               <li key={j.slug}>
                 <Link
-                  to={`/new-jobs/${j.slug}`}
+                  to={`/jobs/${j.slug}`}
                   className="group relative grid gap-5 overflow-hidden rounded-2xl border border-[#0C000E]/10 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#0C000E] hover:shadow-lg lg:grid-cols-[1.5fr_1.6fr_auto] lg:items-center lg:gap-10 lg:p-8"
                 >
                   <span className="absolute inset-y-0 left-0 w-1.5 bg-[#00FF00] transition-all group-hover:w-3" />
@@ -130,8 +130,8 @@ export const Careers = () => {
           <div className="relative">
             <img src={IMG.work} alt="Team collaborating at laptops in a bright office" className="h-[380px] w-full rounded-3xl object-cover sm:h-[460px]" />
             <div className="absolute -bottom-5 -right-2 rounded-2xl bg-[#00FF00] px-5 py-4 text-[#0C000E] sm:-right-6">
-              <p className="display text-3xl font-extrabold">20+</p>
-              <p className="text-sm font-medium">years placing people</p>
+              <p className="display text-3xl font-extrabold">70+</p>
+              <p className="text-sm font-medium">recruited</p>
             </div>
           </div>
           <div>

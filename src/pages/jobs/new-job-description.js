@@ -4,9 +4,9 @@ import { jobs, IMG, formatDate } from './new-jobs';
 import { container, section, btnPrimary, btnSecondary, btnGreen, styles } from '../shared';
 
 const Block = ({ title, children }) => (
-  <section className="border-t border-[#0C000E]/10 py-8 first:border-t-0 first:pt-0">
+  <section>
     <h2 className="display text-xl font-bold sm:text-2xl">{title}</h2>
-    <div className="mt-4">{children}</div>
+    <div className="mt-3">{children}</div>
   </section>
 );
 
@@ -38,88 +38,142 @@ export const JobDetail = () => {
     );
   }
 
-  const applyHref = `mailto:support@irw.ng?subject=${encodeURIComponent(`Application: ${job.title} (${job.client})`)}`;
+const applyHref = job.applyLink || `mailto:support@irw.ng?subject=${encodeURIComponent(`Application: ${job.title} (${job.client})`)}`;
+const isExternal = Boolean(job.applyLink);
   const related = jobs.filter((j) => j.slug !== job.slug).slice(0, 2);
   const facts = [['Client', job.client], ['Location', job.location], ['Work arrangement', job.arrangement], ['Employment type', job.type], ['Date posted', formatDate(job.posted)]];
 
   return (
-    <div className="irw w-full overflow-x-hidden bg-white text-[#0C000E] antialiased">
-      <style>{styles}</style>
+    <div className="irw w-full [overflow-x:clip] bg-white text-[#0C000E] antialiased">
+    <style>{styles}</style>
 
-      {/* Header with photo band */}
-      <section className="relative bg-[#0C000E] text-white">
-        <img src={IMG.office} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0C000E] via-[#0C000E]/85 to-[#0C000E]/40" />
-        <div className={`${container} relative pb-14 pt-8 lg:pb-20`}>
-          <Link to="/careers" className="text-sm font-semibold text-white/70 transition-colors hover:text-[#00FF00]">Back to all openings</Link>
-          <p className="mt-10 text-base font-semibold text-[#00FF00]">{job.client}</p>
-          <h1 className="display mt-2 max-w-3xl text-[clamp(1.875rem,3.6vw,2.875rem)] font-extrabold leading-[1.1]">{job.title}</h1>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {[job.location, job.arrangement, job.type, `Posted ${formatDate(job.posted)}`].map((t) => (
-              <span key={t} className="rounded-full border border-white/25 px-3.5 py-1.5 text-sm text-white/90">{t}</span>
+    {/* Hero */}
+    <section className="relative bg-[#0C000E] text-white">
+      <img src={IMG.office} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0C000E] via-[#0C000E]/85 to-[#0C000E]/40" />
+      <div className={`${container} relative pb-10 pt-6 lg:pb-12`}>
+        <Link to="/careers" className="text-sm font-semibold text-white/70 transition-colors hover:text-[#00FF00]">Back to all openings</Link>
+        <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p className="text-base font-semibold text-[#00FF00]">
+              {job.client}{job.product && ` | Product: ${job.product}`}
+            </p>
+            <h1 className="display mt-2 max-w-3xl text-[clamp(1.875rem,3.6vw,2.875rem)] font-extrabold leading-[1.1]">{job.title}</h1>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {[job.location, job.arrangement, job.type, `Posted ${formatDate(job.posted)}`].map((t) => (
+                <span key={t} className="rounded-full border border-white/25 px-3.5 py-1.5 text-sm text-white/90">{t}</span>
+              ))}
+            </div>
+          </div>
+          <a
+            href={applyHref}
+            className={`${btnGreen} shrink-0`}
+            {...(isExternal && { target: '_blank', rel: 'noreferrer' })}
+          >
+            Apply for this role
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* Body */}
+    <section className={`${container} grid items-start gap-8 py-10 lg:grid-cols-[1fr_340px] lg:gap-10 lg:py-14`}>
+      <article className="space-y-8">
+        {/* Intro card */}
+        <div className="rounded-3xl bg-[#F8F9FA] p-6 sm:p-8">
+          <h2 className="display text-xl font-bold sm:text-2xl">{job.aboutTitle || 'About the company'}</h2>
+          <p className="mt-3 text-base leading-relaxed text-[#0C000E]/80">{job.about}</p>
+          {job.overview && (
+            <>
+              <h3 className="display mt-6 text-base font-bold">Role overview</h3>
+              <p className="mt-2 text-base leading-relaxed text-[#0C000E]/80">{job.overview}</p>
+            </>
+          )}
+        </div>
+
+        <Block title="Responsibilities"><Bullets items={job.responsibilities} /></Block>
+
+        {/* Requirements and Skills side by side */}
+        <div className="grid gap-8 border-t border-[#0C000E]/10 pt-8 md:grid-cols-2">
+          <Block title="Requirements"><Bullets items={job.requirements} /></Block>
+          <Block title="Skills and experience"><Bullets items={job.skills} /></Block>
+        </div>
+
+        {/* Offers strip */}
+        {job.offers?.length > 0 && (
+          <div className="rounded-3xl bg-[#00FF00]/20 p-6 sm:p-8">
+            <h2 className="display text-xl font-bold sm:text-2xl">What {job.client} offers</h2>
+            <ul className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-base font-medium">
+              {job.offers.map((o) => (
+                <li key={o} className="flex items-center gap-2">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-[#0C000E]" />
+                  {o}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </article>
+
+      {/* Sidebar */}
+      <aside className="space-y-5 lg:sticky lg:top-24">
+        <div className="overflow-hidden rounded-3xl border border-[#0C000E] bg-[#F8F9FA]">
+          <div className="bg-[#00FF00] px-6 py-3"><p className="display text-lg font-extrabold">Role at a glance</p></div>
+          <dl className="divide-y divide-[#0C000E]/10 px-6">
+            {facts.map(([k, v]) => (
+              <div key={k} className="flex justify-between gap-4 py-3 text-sm">
+                <dt className="text-[#0C000E]/60">{k}</dt>
+                <dd className="text-right font-semibold">{v}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="space-y-3 p-6">
+            <a
+              href={applyHref}
+              className={`${btnPrimary} w-full`}
+              {...(isExternal && { target: '_blank', rel: 'noreferrer' })}
+            >
+              Apply now
+            </a>
+            <Link to="/contact" className="block text-center text-sm font-semibold underline-offset-4 hover:underline">
+              Ask a recruiter a question
+            </Link>
+          </div>
+        </div>
+
+        {job.kpis && (
+          <div className="rounded-3xl border border-[#0C000E]/10 bg-white p-6">
+            <h2 className="display text-lg font-bold">Monthly targets</h2>
+            <ul className="mt-2 divide-y divide-[#0C000E]/10">
+              {job.kpis.items.map((k) => (
+                <li key={k.label} className="grid grid-cols-[3rem_1fr] items-baseline gap-3 py-2.5">
+                  <span className="display text-right text-lg font-extrabold leading-none">{k.n}</span>
+                  <span className="text-sm leading-snug text-[#0C000E]/75">{k.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </section>
+
+    {related.length > 0 && (
+      <section className={`${section} border-t border-[#0C000E]/10 bg-[#F8F9FA]`}>
+        <div className={container}>
+          <h2 className="display text-2xl font-bold sm:text-3xl">Other roles you might like</h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {related.map((j) => (
+              <Link key={j.slug} to={`/jobs/${j.slug}`} className="group rounded-2xl border border-[#0C000E]/10 border-l-4 border-l-[#00FF00] bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#0C000E] hover:border-l-[#00FF00] hover:shadow-lg">
+                <p className="text-sm font-semibold text-[#0C000E]/60">{j.client}</p>
+                <h3 className="display mt-1 text-xl font-bold">{j.title}</h3>
+                <p className="mt-2 text-sm text-[#0C000E]/70">{j.location}, {j.arrangement}, {j.type}</p>
+              </Link>
             ))}
           </div>
         </div>
       </section>
-
-      <section className={`${container} grid gap-12 py-14 lg:grid-cols-[1.6fr_1fr] lg:gap-16 lg:py-20`}>
-        <article>
-          <Block title="About the role"><p className="text-base leading-relaxed text-[#0C000E]/80 sm:text-lg">{job.about}</p></Block>
-          <Block title="Responsibilities"><Bullets items={job.responsibilities} /></Block>
-          <Block title="Requirements"><Bullets items={job.requirements} /></Block>
-          <Block title="Skills and experience">
-            <div className="flex flex-wrap gap-2">
-              {job.skills.map((s) => (
-                <span key={s} className="rounded-full bg-[#00FF00]/25 px-4 py-2 text-sm font-semibold">{s}</span>
-              ))}
-            </div>
-          </Block>
-          {job.offers?.length > 0 && <Block title={`What ${job.client} offers`}><Bullets items={job.offers} /></Block>}
-          <Block title="How to apply">
-            <p className="max-w-xl text-base leading-relaxed text-[#0C000E]/80">
-              Send your CV and a short note on why this role fits. An IRW recruiter will reply within two working days. Applications are handled by IRW on behalf of {job.client}.
-            </p>
-            <a href={applyHref} className={`${btnGreen} mt-6`}>Apply for this role</a>
-          </Block>
-        </article>
-
-        {/* Sticky summary card */}
-        <aside className="lg:sticky lg:top-24 lg:self-start">
-          <div className="overflow-hidden rounded-3xl border border-[#0C000E] bg-[#F8F9FA]">
-            <div className="bg-[#00FF00] px-6 py-4"><p className="display text-lg font-extrabold">Role at a glance</p></div>
-            <dl className="divide-y divide-[#0C000E]/10 px-6">
-              {facts.map(([k, v]) => (
-                <div key={k} className="flex justify-between gap-4 py-3.5 text-sm">
-                  <dt className="text-[#0C000E]/60">{k}</dt>
-                  <dd className="text-right font-semibold">{v}</dd>
-                </div>
-              ))}
-            </dl>
-            <div className="space-y-3 p-6">
-              <a href={applyHref} className={`${btnPrimary} w-full`}>Apply now</a>
-              <Link to="/contact" className={`${btnSecondary} w-full`}>Ask a recruiter a question</Link>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      {related.length > 0 && (
-        <section className={`${section} border-t border-[#0C000E]/10 bg-[#F8F9FA]`}>
-          <div className={container}>
-            <h2 className="display text-2xl font-bold sm:text-3xl">Other roles you might like</h2>
-            <div className="mt-8 grid gap-5 md:grid-cols-2">
-              {related.map((j) => (
-                <Link key={j.slug} to={`/new-jobs/${j.slug}`} className="group rounded-2xl border border-[#0C000E]/10 border-l-4 border-l-[#00FF00] bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-[#0C000E] hover:border-l-[#00FF00] hover:shadow-lg">
-                  <p className="text-sm font-semibold text-[#0C000E]/60">{j.client}</p>
-                  <h3 className="display mt-1 text-xl font-bold">{j.title}</h3>
-                  <p className="mt-2 text-sm text-[#0C000E]/70">{j.location}, {j.arrangement}, {j.type}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-    </div>
+    )}
+  </div>
   );
 };
 

@@ -43,7 +43,7 @@ const cases = [
   { sector: 'FMCG', client: 'Beverage distributor', result: '31% more monthly revenue', note: 'Sales process rebuilt and field team retrained in one quarter.', service: 'Sales Support' },
 ];
 
-const figures = [['100+', 'businesses served'], ['20+', 'years in operation'], ['98%', 'of clients renew']];
+const figures = [['8500+', 'advisory hours'], ['70+', 'recruited']];
 
 const container = 'mx-auto max-w-7xl px-5 lg:px-10';
 const section = 'py-16 lg:py-24';
@@ -220,14 +220,18 @@ export const IRWHomepage = () => {
 </div>
 
         <div className={`${container} mt-12`}>
-          <dl className="grid gap-6 sm:grid-cols-3">
-            {figures.map(([n, label]) => (
-              <div key={label} className="border-l-2 border-[#00FF00] pl-4">
-                <dt className="display text-3xl font-extrabold text-[#0C000E] sm:text-4xl">{n}</dt>
-                <dd className="mt-1 text-xs text-[#0C000E]/65 sm:text-sm">{label}</dd>
-              </div>
-            ))}
-          </dl>
+
+        <dl className="flex items-center justify-center text-center">
+  {figures.map(([n, label], i) => (
+    <div
+      key={label}
+      className={`px-8 sm:px-16 ${i > 0 ? 'border-l border-[#0C000E]/20' : ''}`}
+    >
+      <dt className="display text-3xl font-extrabold text-[#0C000E] sm:text-4xl">{n}</dt>
+      <dd className="mt-1 text-xs text-[#0C000E]/65 sm:text-sm">{label}</dd>
+    </div>
+  ))}
+</dl>
 
           <ul className="mt-14 border-t border-[#0C000E]/10">
             {cases.map((c) => (

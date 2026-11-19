@@ -32,7 +32,7 @@ function App() {
         {/* <Route path="/" element={<LandingPage />} /> */}
         {/* <Route path="/about" element={<About />} /> */}
         <Route path="/jobs" element={<JobsPreview />} />
-        <Route path="/jobs/:jobId" element={<JobDescriptionRoute />} />
+        {/* <Route path="/jobs/:jobId" element={<JobDescriptionRoute />} /> */}
         {/* <Route path="/sales" element={<SalesJD />} /> */}
         {/* <Route path="/operation" element={<OperationJD />} /> */}
         <Route path="/" element={<IRWHomepage />} />
