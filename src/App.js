@@ -7,7 +7,6 @@ import { JobsPreview } from "./pages/jobs/jobs";
 // import { OperationJD } from "./pages/jobs";
 import NewNavbar from "./components/navbar";
 import { Footer } from "./components/footer";
-import { JobDescriptionRoute } from "./pages/jobs/JobDescriptionRoute";
 import ScrollToTop from "./components/ScrollToTop";
 
 //New pages 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { jobs, IMG, formatDate } from './new-jobs';
-import { container, section, btnPrimary, btnSecondary, btnGreen, styles } from '../shared';
+import { container, section, btnPrimary, btnGreen, styles } from '../shared';
 
 const Block = ({ title, children }) => (
   <section>
