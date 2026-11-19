@@ -26,18 +26,33 @@ export const Contact = () => {
 
       {/* Hero: oversized contact lines */}
       <section className={`${container} grid items-center gap-12 pb-14 pt-10 lg:grid-cols-[1.2fr_1fr] lg:pb-20 lg:pt-16`}>
-        <div>
-          <h1 className="display text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.08]">
-            Tell us what is weighing on your team.
-          </h1>
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#0C000E]/75 sm:text-lg">
-            A short conversation is enough to start. We reply within one working day.
-          </p>
-          <div className="mt-8 space-y-1">
-            <a href="mailto:support@irw.ng" className="display block w-fit border-b-4 border-[#00FF00] text-xl font-bold transition-colors hover:bg-[#00FF00] sm:text-3xl">support@irw.ng</a>
-            <a href="tel:+2349065996599" className="display mt-4 block w-fit border-b-4 border-[#00FF00] text-xl font-bold transition-colors hover:bg-[#00FF00] sm:text-3xl">+234 906 599 6599</a>
-          </div>
-        </div>
+       <div>
+  <h1 className="display text-[clamp(2rem,4vw,3.25rem)] font-extrabold leading-[1.08]">
+    Tell us what is weighing on your team.
+  </h1>
+  <p className="mt-6 max-w-lg text-base leading-relaxed text-[#0C000E]/75 sm:text-lg">
+    A short conversation is enough to start. We reply within one working day.
+  </p>
+
+  <a
+    href="https://forms.gle/hvDraxAe451TPLbF9"
+    target="_blank"
+    rel="noreferrer"
+    className="mt-8 inline-flex items-center justify-center rounded-full bg-[#0C000E] px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-[#251B27] hover:shadow-md"
+  >
+    Fill in our enquiry form
+  </a>
+
+ <div className="mt-8 flex flex-col gap-2 border-t border-[#0C000E]/10 pt-6 sm:flex-row sm:items-center sm:gap-6">
+  <a href="mailto:support@irw.ng" className="text-base font-semibold transition-colors hover:text-[#0C000E]/60">
+    support@irw.ng
+  </a>
+  <span aria-hidden="true" className="hidden h-5 w-px bg-[#0C000E]/25 sm:block" />
+  <a href="tel:+2349065996599" className="text-base font-semibold transition-colors hover:text-[#0C000E]/60">
+    +234 906 599 6599
+  </a>
+</div>
+</div>
         <div className="relative">
           <img src={heroImg} alt="IRW consultant talking through a plan with a client" className="h-[320px] w-full rounded-3xl object-cover sm:h-[400px]" />
           <div className="absolute -bottom-4 left-4 flex items-center gap-3 rounded-2xl bg-[#0C000E] px-5 py-3 text-white shadow-xl sm:-left-6">

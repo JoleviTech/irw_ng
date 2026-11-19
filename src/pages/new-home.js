@@ -4,6 +4,10 @@ import { Plus } from 'lucide-react';
 import tgllifescience from '../assets/about/clients/tgl-lifescience.png';
 import logistikus from '../assets/about/clients/logistikus.jpeg';
 import yconcept from '../assets/about/clients/y3ss-concept.png';
+import pullus from '../assets/about/clients/pullus.png';
+import breinandaccion from '../assets/about/clients/breinandaccion.png';
+import sedamedia from '../assets/about/clients/sedamedia.png';
+import greenbistroo from '../assets/about/clients/greenbistroo.png';
 
 const services = [
   { title: 'Recruitment', slug: 'recruitment', short: 'Quality talent, placed fast.', details: 'From role definition to placement and onboarding, we run the full hiring cycle so the right people join quickly and stay.' },
@@ -31,6 +35,11 @@ const clients = [
   { name: 'TGL Lifescience', logo: tgllifescience },
   { name: 'Logistikus', logo: logistikus },
   { name: 'Y3SSCONCEPT', logo: yconcept },
+  { name: 'Pullus', logo: pullus },
+  { name: 'Brein And Accion', logo:breinandaccion },
+  { name: 'Sedamedia', logo: sedamedia },
+  { name: 'Green Bistroo', logo: greenbistroo },
+
 
 ];
 
@@ -213,7 +222,8 @@ export const IRWHomepage = () => {
         key={i}
         src={c.logo}
         alt={c.name}
-        className="mx-8 h-10 w-auto object-contain mix-blend-multiply opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
+        // className="mx-8 h-10 w-auto object-contain mix-blend-multiply opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
+        className="mx-8 h-10 w-auto object-contain"
       />
     ))}
   </div>

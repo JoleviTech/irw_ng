@@ -141,19 +141,22 @@ const isExternal = Boolean(job.applyLink);
           </div>
         </div>
 
-        {job.kpis && (
-          <div className="rounded-3xl border border-[#0C000E]/10 bg-white p-6">
-            <h2 className="display text-lg font-bold">Monthly targets</h2>
-            <ul className="mt-2 divide-y divide-[#0C000E]/10">
-              {job.kpis.items.map((k) => (
-                <li key={k.label} className="grid grid-cols-[3rem_1fr] items-baseline gap-3 py-2.5">
-                  <span className="display text-right text-lg font-extrabold leading-none">{k.n}</span>
-                  <span className="text-sm leading-snug text-[#0C000E]/75">{k.label}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+      {job.kpis && (
+  <div className="rounded-3xl bg-[#0C000E] p-6 text-white">
+    <h2 className="display text-lg font-bold">Monthly targets</h2>
+    <ul className="mt-5 grid grid-cols-2 gap-x-5 gap-y-6">
+      {job.kpis.items.map((k, i) => (
+        <li
+          key={k.label}
+          className={i === job.kpis.items.length - 1 && job.kpis.items.length % 2 === 1 ? 'col-span-2' : ''}
+        >
+          <p className="display text-3xl font-extrabold leading-none text-[#00FF00]">{k.n}</p>
+          <p className="mt-1.5 text-xs leading-snug text-white/70">{k.label}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
       </aside>
     </section>
 

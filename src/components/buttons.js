@@ -2,7 +2,7 @@ export const WorkWithUsBtn = () => {
   return (
     <>
       <a
-        href="https://forms.gle/Q3BcFPzi8qGZVvH7A"
+        href="https://forms.gle/hvDraxAe451TPLbF9"
         target="_blank"
         rel="noreferrer"
         className="text-decoration-none"
