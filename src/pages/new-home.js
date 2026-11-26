@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus } from 'lucide-react';
+import { Plus, Quote } from 'lucide-react';
 
 import tgllifescience from '../assets/about/clients/tgl-lifescience.png';
 import logistikus from '../assets/about/clients/logistikus.jpeg';
@@ -45,11 +45,17 @@ const clients = [
 
 const marqueeLogos = Array.from({ length: 8 }, () => clients).flat();
 
-
 const cases = [
   { sector: 'Banking', client: 'Tier-one bank, Lagos', result: '62 hires in 8 weeks', note: 'Recruitment for a branch expansion across four states.', service: 'Recruitment' },
   { sector: 'Logistics', client: 'Port logistics firm', result: '11 days saved per project', note: 'A project office set up to run a terminal upgrade on schedule.', service: 'Project Management' },
   { sector: 'FMCG', client: 'Beverage distributor', result: '31% more monthly revenue', note: 'Sales process rebuilt and field team retrained in one quarter.', service: 'Sales Support' },
+];
+
+const testimonials = [
+  {
+    organization: 'TGL Lifescience',
+    quote: "We're really impressed with the diagnostic review IRW carried out for us. They spoke with our staff as well as our stakeholders, took the time to understand how we work, and gave us clear direction throughout the process. The documents they delivered are now guiding our next steps. Thank you to the IRW team for a job well done. We highly recommend them.",
+  },
 ];
 
 const figures = [['8500+', 'advisory hours'], ['70+', 'recruited']];
@@ -259,6 +265,71 @@ export const IRWHomepage = () => {
           </ul>
         </div>
       </section>
+
+    {/* Testimonials */}
+{/* Testimonials */}
+<section className="overflow-hidden border-t border-[#0C000E]/10 bg-white py-14 lg:py-20">
+  <div className={`${container} flex flex-col items-center gap-10`}>
+    <h2 className="display text-center text-2xl font-bold sm:text-3xl lg:text-4xl" style={{ margin: 0 }}>
+      What our clients say
+    </h2>
+
+    <div className="flex w-full flex-col items-center gap-14">
+      {testimonials.map((t) => (
+        <div key={t.organization} className="relative w-full max-w-3xl">
+          {/* Stacked cards behind for depth */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -rotate-3 rounded-3xl border border-[#0C000E]/10 bg-white"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 rotate-2 rounded-3xl border border-[#0C000E]/10 bg-[#F8F9FA]"
+          />
+
+          {/* Main card */}
+          <figure
+            style={{ margin: 0 }}
+            className="relative flex flex-col gap-6 overflow-hidden rounded-3xl border border-[#0C000E]/10 bg-white p-7 shadow-[0_24px_50px_-24px_rgba(12,0,14,0.3)] sm:p-10"
+          >
+            <Quote
+              aria-hidden="true"
+              size={110}
+              strokeWidth={1.5}
+              className="pointer-events-none absolute -right-3 -top-3 text-[#0C000E]/[0.05]"
+            />
+
+            <blockquote className="relative" style={{ margin: 0, padding: 0 }}>
+              <p
+                className="text-base leading-relaxed text-[#0C000E]/80 sm:text-lg"
+                style={{ margin: 0 }}
+              >
+                “{t.quote}”
+              </p>
+            </blockquote>
+
+            <figcaption
+              className="relative flex items-center gap-3 border-t border-[#0C000E]/10 pt-5"
+              style={{ margin: 0 }}
+            >
+              <span
+                aria-hidden="true"
+                className="display flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0C000E]/[0.07] text-xs font-extrabold"
+              >
+                {t.organization
+                  .split(' ')
+                  .map((w) => w[0])
+                  .join('')
+                  .slice(0, 2)}
+              </span>
+              <span className="display text-base font-bold">{t.organization}</span>
+            </figcaption>
+          </figure>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Call to Action Section */}
       <section className="bg-white py-14 text-[#0C000E] border-t border-[#0C000E]/10 lg:py-18">
